@@ -1,7 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Meddon|Roboto');
+
 .App {
     height: 100vh;
     width: 100%;
     margin: 0;
-    background: pink;
+    background: #353535;
+    color: white;
     /* text-decoration: none; */
 }
+
+/* .logo {
+    font-family: 'Meddon', 'cursive';
+    margin: 0;
+    background: white;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    text-decoration: none;
+}
+.logo p {
+    margin: 0;
+}
+a {
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+img {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+} */

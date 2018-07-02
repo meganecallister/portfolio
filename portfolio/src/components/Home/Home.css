@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Meddon|Roboto');
+
+.home {
+    height: 100vh;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.splash {
+    color: white;
+}
+h1 {
+    font-family: 'Meddon', cursive;
+    font-size: 60px;
+    margin: 0;
+    text-align: center;
+}
+p {
+    text-align: center;
+    margin: 0;
+}

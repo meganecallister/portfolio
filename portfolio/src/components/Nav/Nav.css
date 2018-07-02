@@ -1,14 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Meddon|Roboto');
+
 .nav {
-    height: 60px;
+    bottom: 0px;
+    position: absolute;
+    height: 80px;
     width: 100%;
-    background: white;
+    background: #353535;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
+.menu {
+    color: white;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu img {
+    left: 0;
+    position: absolute;
+    margin: 0;
+    margin-left: 20px;
+}
+.menu p {
+    margin: 5px;
+}
+
+
 .logo {
     margin: 0;
     display: flex;
