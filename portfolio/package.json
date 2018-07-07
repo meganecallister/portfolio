@@ -6,7 +6,10 @@
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
+    "express": "^4.16.3",
     "massive": "^5.0.0",
+    "nodemailer": "^4.6.7",
+    "nodemon": "^1.17.5",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
@@ -17,5 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "main": "server/server.js",
+  "proxy": "http://localhost:3003"
 }

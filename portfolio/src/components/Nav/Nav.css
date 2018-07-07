@@ -2,10 +2,10 @@
 
 .nav {
     bottom: 0px;
-    position: absolute;
-    height: 80px;
+    position: fixed;
+    height: 50px;
     width: 100%;
-    background: #353535;
+    background: #1A1A1A;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,32 +15,35 @@
     font-family: 'Roboto', sans-serif;
 }
 .menu {
-    color: white;
     width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 16px;
 }
-.menu img {
+/* .menu h1 {
     left: 0;
+    bottom: 0;
     position: absolute;
     margin: 0;
-    margin-left: 20px;
+    color: white;
+    margin-left: 15px;
+    margin-bottom: 8px;
+    height: 42px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+} */
+.menu img {
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    margin: 0;
+    margin-left: 10px;
+    height: 50px;
 }
 .menu p {
     margin: 5px;
-}
-
-
-.logo {
-    margin: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; 
-    text-decoration: none;
-}
-img {
-    height: 30px;
-    width: 30px;
-    margin: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
 }
