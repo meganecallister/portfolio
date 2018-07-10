@@ -28,13 +28,19 @@
     justify-content: center;
 }
 .portfolio .img-background {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
 }
 .portfolio img {
     margin: 10px;
     height: 200px;
     width: 200px;
+    object-fit: cover;
     border-radius: 50%;
+    box-shadow: 1px 1px 10px #353535;
 }
 .portfolio .title {
     font-size: 22px;
