@@ -4,6 +4,7 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Portfolio from './components/Portfolio/Portfolio';
+import Project from './components/Project/Project';
 
 export default function() {
     return (
@@ -12,6 +13,7 @@ export default function() {
             <Route path='/about' component={About}/>
             <Route path='/contact' component={Contact}/>
             <Route path='/portfolio' component={Portfolio}/>
+            <Route path='/project/:id' component={Project}/>
         </Switch>
     )
 }

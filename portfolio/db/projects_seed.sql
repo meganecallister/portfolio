@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS Projects;
 
-CREATE TABLE IF NOT EXISTS Projects (
+CREATE TABLE Projects (
     id SERIAL PRIMARY KEY,
     img TEXT,
     title TEXT,
@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS Projects (
 
 INSERT INTO Projects (img, title, subtitle, description, tech, site_link, github_link)
 VALUES
-('./celebratePic.PNG', 'Celebrate', 'an app', 'celebrate descriptions', 'react', 'www.celebrate.meganecallister.com', 'www.github.com'),
-('', 'Clonify', 'an app', 'celebrate descriptions', 'react', 'www.celebrate.meganecallister.com', 'www.github.com');
+('{celebrate}', 'Celebrate', 'an app', 'celebrate descriptions', 'react', 'www.celebrate.meganecallister.com', 'www.github.com'),
+('{clonify}', 'Clonify', 'an app', 'celebrate descriptions', 'react', 'www.celebrate.meganecallister.com', 'www.github.com');
 
-select * from projects;
+SELECT * FROM projects;

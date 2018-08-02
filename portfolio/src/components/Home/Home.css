@@ -16,12 +16,19 @@
     width: 100%;
     background-image: url('./poppy.jpg');
     background-repeat: no-repeat;
-    background-position: right bottom;
+    background-position: right;
     background-size: cover;
     z-index: 0;
     position: fixed;
+    opacity: .8;
+}
+.splash {
+    /* background: red; */
+    width: 100%;
+    z-index: 10;
 }
 h1 {
+    /* background: blue; */
     color: #1A1A1A;
     font-family: 'Meddon', cursive;
     font-size: 80px;
@@ -31,12 +38,11 @@ h1 {
     z-index: 5;
 }
 .home p {
-    color: #1a1a1a;
+    /* background: yellow; */
+    color: #353535;
     text-align: center;
-    margin: 20px;
-    font-size: 18px;
-    top: 0;
-    position: absolute;
+    font-size: 28px;
     z-index: 1;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
 }

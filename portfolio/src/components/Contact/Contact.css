@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Meddon|Roboto');
+
 .contact {
     height: 100vh;
     width: 100%;
@@ -5,15 +7,102 @@
     flex-direction: column;
     align-items: center;
     background: #F5524A;
+    font-family: "Roboto", sans-serif;
 }
 .contact h1 {
     color: #1a1a1a;
     font-size: 50px;
     margin: 20px;
 }
+.contact-inputs {
+    height: 350px;
+    max-width: 350px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 5%;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+input {
+    padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+    background: #eee;
+    line-height: 30px;
+    word-wrap: break-word;
+}
+
+input:focus {
+    outline: none;
+    background: white;
+}
+input:hover {
+    background: white;
+    transition: background 0.4s ease;
+}
+button:focus {
+    outline: none;
+    background: white;
+}
+button:hover {
+    background: white;
+    transition: background 0.2s ease;
+}
+.name-and-email {
+    height: 30px;
+    width: 100%;
+    border: none;
+    box-shadow: 1px 1px 5px #353535;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.message {
+    border: none;
+    box-shadow: 1px 1px 5px #353535;
+    width: 100%;
+    border-radius: 3px;
+    font-size: 16px;
+    min-height: 30px;
+}
+.send {
+    margin: 10px;
+    background: #eee;
+    height: 30px;
+    width: 80px;
+    border: none;
+    box-shadow: 1px 1px 10px #353535;
+    border-radius: 3px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+.icons {
+    width: 50px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    position: fixed;
+    left: 30px;
+    top: 30%;
+}
 .contact p {
-    color: #1a1a1a;  
+    color: #1a1a1a;
+    top: 0;
+    left: 0;
 }
 .contact img {
     height: 50px;
+}
+@media (max-width: 700px) {
+    .contact h1 {
+        font-size: 40px;
+        margin: 20px;
+    }
 }

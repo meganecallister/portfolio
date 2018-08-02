@@ -21,6 +21,17 @@
     align-items: center;
     font-size: 16px;
 }
+.HAM {
+    display: none;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    margin: 0;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    height: 40px;
+    cursor: pointer;
+}
 /* .menu h1 {
     left: 0;
     bottom: 0;
@@ -34,7 +45,7 @@
     display: flex;
     align-items: center;
 } */
-.menu img {
+.m {
     left: 0;
     bottom: 0;
     position: absolute;
@@ -46,4 +57,18 @@
     margin: 5px;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
+}
+
+/* ====================== */
+
+@media (max-width: 700px) {
+    .menu p {
+        display: none;
+        margin: 5px;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .HAM {
+        display: block;
+    }
 }

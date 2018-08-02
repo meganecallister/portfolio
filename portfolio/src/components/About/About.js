@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './About.css';
+import profile from './profile.jpg';
 
 class About extends Component {
   render() {
@@ -9,8 +10,11 @@ class About extends Component {
         <h1>about</h1>
 
         <div className='picAndInfo'>
-          <div className='pic'></div>
-          <p className='info'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+          <img className='pic' src={profile}/>
+
+          <p className='info'>Hi, I'm Megan. I am a web developer focused on technologies such as React, JavaScript, HTML/CSS, PostgreSQL, and more.  In my free time I can be found exploring Provo on long walks, cooking vegan meals with my husband, and catching up on current events.</p>
+          
         </div>
 
       </div>

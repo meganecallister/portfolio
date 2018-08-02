@@ -1,0 +1,17 @@
+.profile {
+    height: 100vh;
+    width: 100vw;
+
+}
+.profile-page {
+    display: flex;
+    padding: 50px;
+}
+.eatOrSleep {
+    height: 100vh;
+    width: 50vw;
+}
+.add-column {
+    height: 100vh;
+    width: 50vw;
+}

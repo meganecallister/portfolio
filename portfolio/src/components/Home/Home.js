@@ -14,10 +14,11 @@ class Home extends Component {
         <div className='image'></div>
         {/* <img src={poppy} alt='poppy in white flower field'/> */}
         
-        <p>FULL-STACK WEB DEVELOPER</p>  
+ 
 
         <div className='splash'>
           <h1>megan callister</h1>
+        <p>FULL-STACK WEB DEVELOPER</p>           
         </div>
         
       </div>

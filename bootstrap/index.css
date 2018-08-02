@@ -1,0 +1,45 @@
+body {
+    height: 100vh;
+    width: 100%;
+}
+.col-xs-3 {
+    background: yellow;
+}
+.col-4 {
+    background: teal;
+}
+.col-xs-12 {
+    height: 75;
+    background-color: green;
+    border: 2px solid black;
+  }
+  .col-xs-8 {
+    height: 50px;
+    background-color: pink;
+    border: 2px solid black;
+  }
+  .col-xs-6 {
+    height: 50px;
+    background-color: blue;
+    border: 2px solid black;
+  }
+  .col-xs-4 {
+    height: 50px;
+    background-color: red;
+    border: 2px solid black;
+  }
+  .footer .col-sm-4 {
+    height: 25px;
+    background-color: green;
+    border: 2px solid black;
+  }
+  .col-sm-4 {
+    height: 25px;
+    background-color: white;
+    border: 2px solid black;
+  }
+  .col-sm-8 {
+    height: 25px;
+    background-color: yellow;
+    border: 2px solid white;
+  }

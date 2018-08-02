@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Portfolio.css';
 import axios from 'axios';
 import celebrate from './celebratePic.png';
@@ -24,18 +25,22 @@ class Portfolio extends Component {
   }
 
   render() {
+    
     let mappedProjects = this.state.projects.map( (e, i) => {
-      // return (
-      //   <div key={i} className='project-card'>
 
-      //     <img src='./celebratePic.png' alt='project' style={{background: 'blue'}}/>
-      //     {/* <img src={e.img} alt='project '/> */}
+      return (
+        <div key={i} className='project-card'>
+            {/* <img src='./celebratePic.png' alt='project' style={{background: 'blue'}}/> */}
 
-      //     <p className='title'>{e.title}</p>
-      //     <p className='subtitle'>{e.subtitle}</p>
+            <Link style={{textDecoration: 'none', height: 280, width: 280, background: 'blue'}} to={`/project/${e.id}`}>
+              <img src={e.img ? e.img : null} alt='proj' style={{color: 'black'}}/>
+              <p className='title'>{e.title}</p>
+              <p className='subtitle'>{e.subtitle}</p>
+            </Link>
 
-      //   </div>
-      // )
+            {console.log(e.img, 'e.img')}
+        </div>
+      )
     })
 
     return (
@@ -46,20 +51,6 @@ class Portfolio extends Component {
         <div className='projects'>
 
            {mappedProjects}
-
-           <div className='project-card'>
-            <img src={celebrate} alt='project'/>
-            <p className='title'>Celebrate</p>
-            <p className='subtitle'>the celebrate app</p>
-          </div>
-
-          <div className='project-card'>
-            <div className='img-background'>
-              <img src={clonify} alt='project'/>
-            </div>
-            <p className='title'>Spotify</p>
-            <p className='subtitle'>the spotify app</p>
-          </div>
 
         </div>
 
