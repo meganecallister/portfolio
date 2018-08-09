@@ -1,17 +1,100 @@
-.profile {
+@import url('https://fonts.googleapis.com/css?family=Meddon|Roboto');
+
+.project-class {
     height: 100vh;
     width: 100vw;
-
+    color: #1a1a1a;
+    font-family: 'Roboto', sans-serif;
 }
-.profile-page {
+.left-side {
+    height: 100vh;
+    width: 50vw;
+    position: fixed;
+    left: 0;
+    box-sizing: border-box;
     display: flex;
-    padding: 50px;
+    flex-direction: column;
+    align-items: center;
 }
-.eatOrSleep {
+.title-subtitle {
+    /* background: purple; */
+    text-align: center;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.title {
+    /* background: pink; */
+    font-family: 'Roboto', sans-serif;
+    color: #1a1a1a;
+    font-size: 50px;
+    margin: 0;
+}
+.subtitle {
+    margin: 0;
+    font-size: 20px;
+}
+.three-pics {
+    height: 16vw;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.circle {
+    background: #F5524A;
+    height: 14vw;
+    width: 14vw;
+    border-radius: 50%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.description-tech {
+    /* background: gray; */
+    width: 50vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    box-sizing: border-box;
+}
+.description {
+    margin: 0;
+}
+.tech {
+    margin: 0;
+    text-align: center;
+}
+.links {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+a {
+    color: black;
+}
+.link {
+    margin: 0;
+    margin-top: 20px;
+}
+.project-class button {
+    background: #F5524A;
+    height: 30px;
+    width: 80px;
+    border-radius: 3px;
+    border: none;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;    
+}
+.right-side {
+    background: gray;
     height: 100vh;
     width: 50vw;
-}
-.add-column {
-    height: 100vh;
-    width: 50vw;
+    position: fixed;
+    right: 0;
 }

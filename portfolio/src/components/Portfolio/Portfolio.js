@@ -29,16 +29,14 @@ class Portfolio extends Component {
     let mappedProjects = this.state.projects.map( (e, i) => {
 
       return (
-        <div key={i} className='project-card'>
-            {/* <img src='./celebratePic.png' alt='project' style={{background: 'blue'}}/> */}
-
-            <Link style={{textDecoration: 'none', height: 280, width: 280, background: 'blue'}} to={`/project/${e.id}`}>
-              <img src={e.img ? e.img : null} alt='proj' style={{color: 'black'}}/>
+        <div key={i}>  
+          <Link style={{textDecoration: 'none'}} to={`/project/${e.id}`}>
+            <div className='project-card'>
+              <img src={e.img} alt='proj' style={{color: 'black'}}/>
               <p className='title'>{e.title}</p>
               <p className='subtitle'>{e.subtitle}</p>
-            </Link>
-
-            {console.log(e.img, 'e.img')}
+            </div>
+          </Link>
         </div>
       )
     })

@@ -1,16 +1,23 @@
 require('dotenv').config();
-// const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 const express = require('express');
 const bodyParser = require('body-parser');
 const massive = require('massive');
-// const xoauth2 = require('xoauth2');
+// const oauth2 = require('oauth2');
+const xoauth2 = require('xoauth2');
+const path = require('path');
+const smtpTransport = require('nodemailer-smtp-transport');
 
 const {
     SERVER_PORT,
     CONNECTION_STRING,
     GMAIL_ADDRESS,
-    GMAIL_PASSWORD
-} =  process.env
+    GMAIL_PASSWORD,
+    CLIENT_ID,
+    CLIENT_SECRET,
+    REFRESH_TOKEN,
+    ACCESS_TOKEN
+} = process.env
 
 const app = express();
 
@@ -25,86 +32,61 @@ massive(CONNECTION_STRING).then( db => {
 
 //==========================//
 
-// var transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//     xoauth2: xoauth2.createXOAuth2Generator({
-//       user: process.env.GMAIL_ADDRESS,
-//       // pass: process.env.GMAIL_PASSWORD,     
-//       clientId: '',
-//       clientSecret: '',
-//       refreshToken: '' 
-//     })
-//   }
-// });
+var transporter = nodemailer.createTransport(smtpTransport({
+  service: 'gmail',
+  host: 'smtp.gmail.com',
+  auth: {
+    xoauth2: xoauth2.createXOAuth2Generator({
+      user: GMAIL_ADDRESS,
+      pass: GMAIL_PASSWORD,     
+      clientId: CLIENT_ID,
+      clientSecret: CLIENT_SECRET,
+      refreshToken: REFRESH_TOKEN,
+      accessToken: ACCESS_TOKEN
+    })
+  }
+}));
 
 // var mailOptions = {
-//   from: 'some rando <meganecallister@gmail.com',
-//   to: 'meganecallister@gmail.com',
+//   from: 'Some Rando',
+// //   to: GMAIL_ADDRESS,
 //   subject: 'Nodemailer test',
-//   text: 'Hello World!'
+//   text: 'Hello World!',
+//   html: 'Hello World!'
 // }
 
-// transporter.sendMail(mailOptions, function (err, res) {
-//   if(err){
-//     console.log('Error');
+// transporter.sendMail(mailOptions, function (err, info) {
+//   if(err) {
+//     console.log(err);
 //   } else {
-//     console.log('Email Send');
+//     console.log(info);
 //   }
 // })
 
+app.post('/sendEmail/', (req, res) => {
+    const db = req.app.get('db');
+    const { name, subject, email, message } = req.body;
 
-// app.post('/sendEmail/', function(req, res) {
-//   console.log('req.body.name ==>', req.body.name);
-//   transporter.sendMail({
-//     from: req.body.name,
-//     to: [GMAIL_ADDRESS],
-//     subject: req.body.subject || '[No subject]',
-//     html: req.body.message || '[No message]',
-//   })
-// });
+    var mailOptions = {
+        from: name,
+        email: email,
+        to: GMAIL_ADDRESS,
+        subject: subject || '[No Subject]',
+        html: "From " + name + " at " + email + ": " + message || '[No Message]'
+      }
 
-//===========================//
-
-// var transporter = nodemailer.createTransport({
-//     service: 'gmail',
-//     auth: {
-//            user: process.env.GMAIL_USERNAME,
-//            pass: process.env.GMAIL_PASSWORD
-//        }
-//    });
-
-//==========================//
-
-//POST route from contact form
-// app.post('/contact', function (req, res) {
-//     let mailOpts, smtpTrans;
-//     smtpTrans = nodemailer.createTransport({
-//       host: 'smtp.gmail.com',
-//       port: 465,
-//       secure: true,
-//       auth: {
-//         user: GMAIL_ADDRESS,
-//         pass: GMAIL_PASSWORD
-//       }
-//     });
-//     mailOpts = {
-//       from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-//       to: GMAIL_ADDRESS,
-//       subject: 'New message from contact form at tylerkrys.ca',
-//       text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
-//     };
-//     smtpTrans.sendMail(mailOpts, function (error, response) {
-//       if (error) {
-//         res.render('contact-failure');
-//       }
-//       else {
-//         res.render('contact-success');
-//       }
-//     });
-//   });
-
-//==========================//
+    db.view_project_data([name, subject, email, message])
+    .then((sentEmail) => {
+        transporter.sendMail(mailOptions, function(err, info) {
+            if (err) {
+                console.log(err)
+            } else {
+                console.log(info)
+            };
+        res.status(200).send(sentEmail);            
+        })
+    })
+});
 
 app.get('/viewProjects', (req, res) => {
     // console.log('reached the server')
@@ -114,5 +96,17 @@ app.get('/viewProjects', (req, res) => {
         // console.log(projects);
     })
 })
+
+
+app.get('/api/project_data/:id', (req, res) => {
+    // console.log('req.params.id => ', req.params.id)
+    const db = req.app.get('db');
+    db.view_project_data([req.params.id])
+    .then((projectData) => {
+        res.status(200).send(projectData);
+        // console.log('projectData', projectData)
+    })
+})
+
 
 app.listen(SERVER_PORT, () => console.log(`${SERVER_PORT} squirrels ready to charge.`))

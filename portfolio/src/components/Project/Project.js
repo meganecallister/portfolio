@@ -12,9 +12,9 @@ class Profile extends Component {
     }
 
     componentDidMount() {
-        console.log(this.state.user_id)
+        console.log(this.state.project_id)
 
-        axios.get(`/api/project_data/${this.state.user_id}`)
+        axios.get(`/api/project_data/${this.state.project_id}`)
         .then(res => {
             this.setState({
                 project_data: res.data
@@ -26,20 +26,45 @@ class Profile extends Component {
         let projectData = this.state.project_data.map((e, i) => {
             return (
                 <div key={i}>
-                    <p>{e.name}</p>
-                    <img src={e.img} alt='project pic'/>
+
+                    <div className='left-side'>
+
+                        <div className='title-subtitle'>
+                            <p className='title'>{e.title}</p>
+                            <p className='subtitle'>{e.subtitle}</p>
+                        </div>
+
+                        <div className='three-pics'>
+                            <img src={e.img} alt='picture' className='circle'/>
+                            <img src={e.img} alt='picture' className='circle'/>
+                            <img src={e.img} alt='picture' className='circle'/>
+                        </div>
+
+                        <div className='description-tech'>
+                            <p className='description'>{e.description}</p>
+                            <br/>
+                            <p className='tech'>{e.tech}</p>
+                        </div>
+
+                        <div className='links'>
+                            <a href={e.site_link} target="_blank"><p className='link'>{e.title}</p></a>
+                            <a href={e.github_link} target="_blank"><p className='link'>GitHub</p></a>
+                        </div>
+
+                    </div>
+
+
+                    <div className='right-side'>
+                        <img src={e.img} alt='project pic'/>
+                    </div>
+
                 </div>
             )
         })
 
         return (
-            <div className='profile'>
-
-                <div className='profile-page'>
-                    <h1>Profile of {this.state.user_id}!</h1>
-                    {projectData}
-                </div>
-
+            <div className='project-class'>
+                {projectData}
             </div>
         )    
     }
