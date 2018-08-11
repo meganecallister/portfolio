@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Portfolio.css';
 import axios from 'axios';
+// import celebrate from './celebratePic.png';
+// import clonify from './clonifyPic.png';
 import celebrate from './celebratePic.png';
 import clonify from './clonifyPic.png';
+
 
 class Portfolio extends Component {
   constructor() {
@@ -30,9 +33,10 @@ class Portfolio extends Component {
 
       return (
         <div key={i}>  
+
           <Link style={{textDecoration: 'none'}} to={`/project/${e.id}`}>
             <div className='project-card'>
-              <img src={e.img} alt='proj' style={{color: 'black'}}/>
+              <img src={e.img} alt={e.img} style={{color: 'black'}}/>
               <p className='title'>{e.title}</p>
               <p className='subtitle'>{e.subtitle}</p>
             </div>
@@ -45,8 +49,10 @@ class Portfolio extends Component {
       <div className="portfolio">
 
         <h1>portfolio</h1>
-        
+
         <div className='projects'>
+
+        {/* <div className="spinny-thing"></div> */}
 
            {mappedProjects}
 

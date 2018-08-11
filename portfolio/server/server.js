@@ -21,7 +21,7 @@ const {
 
 const app = express();
 
-// app.use( express.static(`${__dirname}/../build` ));
+app.use( express.static(`${__dirname}/../build` ));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -47,35 +47,21 @@ var transporter = nodemailer.createTransport(smtpTransport({
   }
 }));
 
-// var mailOptions = {
-//   from: 'Some Rando',
-// //   to: GMAIL_ADDRESS,
-//   subject: 'Nodemailer test',
-//   text: 'Hello World!',
-//   html: 'Hello World!'
-// }
-
-// transporter.sendMail(mailOptions, function (err, info) {
-//   if(err) {
-//     console.log(err);
-//   } else {
-//     console.log(info);
-//   }
-// })
-
 app.post('/sendEmail/', (req, res) => {
     const db = req.app.get('db');
     const { name, subject, email, message } = req.body;
-
+    console.log(name, subject, email, message);
+    // db.add_email_data([name, subject, email, message])
+    // .then(email => {
+    //     res.status(200).send(email);
+    // });
     var mailOptions = {
         from: name,
-        email: email,
         to: GMAIL_ADDRESS,
         subject: subject || '[No Subject]',
         html: "From " + name + " at " + email + ": " + message || '[No Message]'
       }
-
-    db.view_project_data([name, subject, email, message])
+    db.view_email_data([name, subject, email, message])
     .then((sentEmail) => {
         transporter.sendMail(mailOptions, function(err, info) {
             if (err) {

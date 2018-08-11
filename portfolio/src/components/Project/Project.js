@@ -35,9 +35,9 @@ class Profile extends Component {
                         </div>
 
                         <div className='three-pics'>
-                            <img src={e.img} alt='picture' className='circle'/>
-                            <img src={e.img} alt='picture' className='circle'/>
-                            <img src={e.img} alt='picture' className='circle'/>
+                            <img src={e.pic1} alt='picture' className='circle'/>
+                            <img src={e.pic2} alt='picture' className='circle'/>
+                            <img src={e.pic3} alt='picture' className='circle'/>
                         </div>
 
                         <div className='description-tech'>
@@ -47,15 +47,16 @@ class Profile extends Component {
                         </div>
 
                         <div className='links'>
-                            <a href={e.site_link} target="_blank"><p className='link'>{e.title}</p></a>
-                            <a href={e.github_link} target="_blank"><p className='link'>GitHub</p></a>
+                            <a href={e.site_link} target="_blank"><button className='link'>{e.title}</button></a>
+                            {console.log(e.site_link)}
+                            <a href={e.github_link} target="_blank"><button className='link'>GitHub</button></a>
                         </div>
 
                     </div>
 
 
                     <div className='right-side'>
-                        <img src={e.img} alt='project pic'/>
+                        <img src={e.img} alt='project pic' className='right-side-img'/>
                     </div>
 
                 </div>

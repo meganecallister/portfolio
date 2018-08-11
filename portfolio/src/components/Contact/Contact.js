@@ -10,6 +10,7 @@ class Contact extends Component {
     super();
 
     this.state = {
+      fakeId: '10',
       name: '',
       email: '',
       subject: '',
@@ -35,8 +36,8 @@ class Contact extends Component {
   }
   
   handleClick() {
-    const { name, subject, message } = this.state;
-    const body = { name, subject, message };
+    const { name, subject, email, message } = this.state;
+    const body = { name, subject, email, message };
     console.log('body ==>', body)
     axios.post('/sendEmail/', body).then((res) => {
       this.setState({
@@ -48,29 +49,6 @@ class Contact extends Component {
     })
   }
 
-  // handleSubmit(e){
-  //   e.preventDefault();
-  //   const name = document.getElementById('name').value;
-  //   const email = document.getElementById('email').value;
-  //   const message = document.getElementById('message').value;
-  //   axios({
-  //       method: "POST", 
-  //       url:"http://localhost:3002/send", 
-  //       data: {
-  //           name: name,   
-  //           email: email,  
-  //           messsage: message
-  //       }
-  //   }).then((response)=>{
-  //       if (response.data.msg === 'success'){
-  //           alert("Message Sent."); 
-  //           this.resetForm()
-  //       }else if(response.data.msg === 'fail'){
-  //           alert("Message failed to send.")
-  //       }
-  //   })
-  // }
-
   render() {
     return (
       <div className="contact">
@@ -78,8 +56,8 @@ class Contact extends Component {
         <h1>contact</h1>
 
         <div className='icons'>
-          <a href='https://github.com/meganecallister' target='_blank'><img src={linkedin} alt='GitHub icon'/></a>
-          <a href='https://www.linkedin.com/in/meganecallister/' target='_blank'><img style={{height: 48}}src={github} alt='LinkedIn icon'/></a>
+          <a href='https://www.linkedin.com/in/meganecallister/' target='_blank'><img src={linkedin} alt='GitHub icon'/></a>
+          <a href='https://github.com/meganecallister' target='_blank'><img style={{height: 48}}src={github} alt='LinkedIn icon'/></a>
           <a href='https://twitter.com/maneysmilesback' target='_blank'><img style={{height: 40, margin: 5, marginLeft: 5}} src={twitter} alt='Twitter icon'/></a>
         </div>
 
@@ -90,9 +68,7 @@ class Contact extends Component {
           <input onChange={ e => this.handleChangeName( e.target.value) } type="text"
           placeholder="Name" value={this.state.name} className='name-and-email'></input>
 
-          <input
-          onChange={ e => this.handleChangeEmail( e.target.value) }
-          type="text" 
+          <input onChange={ e => this.handleChangeEmail( e.target.value) } type="text" 
           placeholder="Email" value={this.state.email} className='name-and-email'></input>
 
           <input onChange={ e => this.handleChangeSubject( e.target.value) } type="text"
@@ -104,7 +80,6 @@ class Contact extends Component {
           <button onClick={this.handleClick} className="send">Send</button>
 
         </div>
-
 
       </div>
     );

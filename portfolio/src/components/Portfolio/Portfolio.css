@@ -8,9 +8,27 @@
     background: white;
 }
 .portfolio h1 {
-    color: #F5524A;
+    color: #1a1a1a;
     font-size: 50px;
     margin: 20px;
+}
+.spinny-thing {
+    height: 50px;
+    width: 50px;
+    border: 5px solid #eee;
+    border-top: 5px solid #353535;
+    /* border-left: 5px solid #353535; */
+    border-bottom: 5px solid #353535;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+    top: 50;
+    left: 50;
+    position: relative;
+    z-index: 5;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 .projects {
     max-width: 80%;
@@ -28,21 +46,23 @@
     align-items: center;
     justify-content: center;
 }
-.portfolio .img-background {
+/* .portfolio .img-background {
     background: pink;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
     width: 200px;
-}
+} */
 .portfolio img {
+    background: #555;
     margin: 10px;
     height: 200px;
     width: 200px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 1px 1px 5px #353535;
+    position: relative;
 }
 .portfolio .title {
     font-size: 22px;
