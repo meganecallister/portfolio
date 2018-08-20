@@ -56,9 +56,9 @@ class Contact extends Component {
         <h1>contact</h1>
 
         <div className='icons'>
-          <a href='https://www.linkedin.com/in/meganecallister/' target='_blank'><img src={linkedin} alt='GitHub icon'/></a>
-          <a href='https://github.com/meganecallister' target='_blank'><img style={{height: 48}}src={github} alt='LinkedIn icon'/></a>
-          <a href='https://twitter.com/maneysmilesback' target='_blank'><img style={{height: 40, margin: 5, marginLeft: 5}} src={twitter} alt='Twitter icon'/></a>
+          <a href='https://www.linkedin.com/in/meganecallister/' target='_blank' rel='opopener noreferrer'><img src={linkedin} alt='GitHub icon'/></a>
+          <a href='https://github.com/meganecallister' target='_blank'  rel='opopener noreferrer'><img style={{height: 48}}src={github} alt='LinkedIn icon'/></a>
+          <a href='https://twitter.com/maneysmilesback' target='_blank'  rel='opopener noreferrer'><img style={{height: 40, margin: 5, marginLeft: 5}} src={twitter} alt='Twitter icon'/></a>
         </div>
 
         {/* <p>Want to get in touch? Email me here!</p> */}

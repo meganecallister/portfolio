@@ -35,9 +35,9 @@ class Profile extends Component {
                         </div>
 
                         <div className='three-pics'>
-                            <img src={e.pic1} alt='picture' className='circle'/>
-                            <img src={e.pic2} alt='picture' className='circle'/>
-                            <img src={e.pic3} alt='picture' className='circle'/>
+                            <img src={e.pic1} alt='project pic 1' className='circle'/>
+                            <img src={e.pic2} alt='project pic 2' className='circle'/>
+                            <img src={e.pic3} alt='project pic 3' className='circle'/>
                         </div>
 
                         <div className='description-tech'>

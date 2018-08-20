@@ -2,7 +2,7 @@ import React from 'react';
 import './Nav.css';
 import { Link } from 'react-router-dom';
 // import tulip from './tulip.svg';
-import tulip from './tulip.png';
+// import tulip from './tulip.png';
 import m from './m.png';
 import HAM from './HAM.png';
 
@@ -21,7 +21,7 @@ function Nav() {
                 <Link to='/portfolio' style={{textDecoration: 'none', color: 'white'}}><p>PORTFOLIO</p></Link>
                 <p>|</p>
                 <Link to='/contact' style={{textDecoration: 'none',  color: 'white'}}><p>CONTACT</p></Link>
-                <img className="HAM" src={HAM}/>
+                <img className="HAM" src={HAM} alt='menu icon'/>
             </div>
         </div>
     )

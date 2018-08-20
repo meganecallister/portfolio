@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Portfolio.css';
 import axios from 'axios';
-// import celebrate from './celebratePic.png';
-// import clonify from './clonifyPic.png';
-import celebrate from './celebratePic.png';
-import clonify from './clonifyPic.png';
-
 
 class Portfolio extends Component {
   constructor() {
