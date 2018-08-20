@@ -55,7 +55,7 @@
     border-radius: 50%;
     box-shadow: 1px 1px 5px #353535;
     position: relative;
-    filter: grayscale(90%);
+    filter: grayscale(100%);
 }
 .portfolio .title {
     font-size: 22px;
