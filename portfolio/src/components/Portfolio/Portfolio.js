@@ -29,7 +29,7 @@ class Portfolio extends Component {
       return (
         <div key={i}>  
 
-          <Link style={{textDecoration: 'none'}} to={`/project/${e.id}`}>
+          <Link style={{textDecoration: 'none'}} to={`/project/${e.title}`}>
             <div className='project-card'>
               <img src={e.img} alt={e.img} style={{color: 'black'}}/>
               <p className='title'>{e.title}</p>

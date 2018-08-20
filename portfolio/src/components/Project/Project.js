@@ -6,15 +6,15 @@ class Profile extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            project_id: props.match.params.id,
+            project_title: props.match.params.title,
             project_data: []
         }
     }
 
     componentDidMount() {
-        console.log(this.state.project_id)
+        console.log(this.state.project_title)
 
-        axios.get(`/api/project_data/${this.state.project_id}`)
+        axios.get(`/api/project_data/${this.state.project_title}`)
         .then(res => {
             this.setState({
                 project_data: res.data

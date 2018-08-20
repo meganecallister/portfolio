@@ -13,7 +13,7 @@ export default function() {
             <Route path='/about' component={About}/>
             <Route path='/contact' component={Contact}/>
             <Route path='/portfolio' component={Portfolio}/>
-            <Route path='/project/:id' component={Project}/>
+            <Route path='/project/:title' component={Project}/>
         </Switch>
     )
 }

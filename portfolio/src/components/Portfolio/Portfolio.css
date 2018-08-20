@@ -8,7 +8,7 @@
     background: white;
 }
 .portfolio h1 {
-    color: #1a1a1a;
+    color: #F5524A;
     font-size: 50px;
     margin: 20px;
 }
@@ -46,16 +46,8 @@
     align-items: center;
     justify-content: center;
 }
-/* .portfolio .img-background {
-    background: pink;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    width: 200px;
-} */
 .portfolio img {
-    background: #555;
+    background: #F5524A;
     margin: 10px;
     height: 200px;
     width: 200px;
@@ -63,6 +55,7 @@
     border-radius: 50%;
     box-shadow: 1px 1px 5px #353535;
     position: relative;
+    filter: grayscale(90%);
 }
 .portfolio .title {
     font-size: 22px;
