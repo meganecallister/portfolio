@@ -1,0 +1,104 @@
+.home {
+    height: 100vh;
+    width: 100%;
+    background: black;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.block {
+    height: 33.33%;
+    width: 33.33%;
+    margin: 0;
+    color: white;
+    font-size: 30px;
+}
+#top-left {
+    background: #FCDD71;
+}
+#logo-block {
+    background-image: url('./laptop-yellow-cup.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo-block:hover {
+    transition-property: filter;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(.3, 0, 0, 1);
+    filter: opacity(80%);
+    cursor: pointer; 
+}
+#top-right {
+    background: #E6E7EC;
+}
+#about-block {
+    background: white;
+    background-image: url('./laptop-yellow-cup.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about-block:hover {
+    transition-property: filter;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(.3, 0, 0, 1);
+    filter: opacity(80%);
+    cursor: pointer; 
+}
+#center {
+    background: #878383;
+}
+#projects-block {
+    background-image: url('./laptop-yellow-cup.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .projects-label {
+    display: none;
+} */
+#projects-block:hover{
+    transition-property: filter;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(.3, 0, 0, 1);
+    filter: opacity(80%);
+    cursor: pointer;    
+}
+/* #projects-block:hover {
+    .projects-label {
+        display: block;
+    }
+} */
+#bottom-left {
+    background: #B5B4BA;
+}
+#contact-block {
+    background: white;
+    background-image: url('./mailbox-black-white.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact-block:hover {
+    transition-property: filter;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(.3, 0, 0, 1);
+    filter: opacity(80%);
+    cursor: pointer; 
+}
+#bottom-right {
+    background: #A0BA2C;
+}

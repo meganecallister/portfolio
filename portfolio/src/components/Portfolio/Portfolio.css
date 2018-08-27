@@ -31,12 +31,13 @@
     100% { transform: rotate(360deg); }
 }
 .projects {
+    /* background: red; */
     max-width: 80%;
     min-height: 50vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 }
 .project-card {
     height: 280px;
