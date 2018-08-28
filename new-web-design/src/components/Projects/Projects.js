@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Projects.css';
 import axios from 'axios';
+import Nav from '../../components/Nav/Nav';
 
-class Portfolio extends Component {
+class Projects extends Component {
   constructor() {
     super();
 
@@ -41,19 +42,27 @@ class Portfolio extends Component {
     // })
 
     return (
-      <div className="portfolio">
+      <div className="projects">
 
-        {/* <h1>portfolio</h1>
+            <Nav/>
 
-        <div className='projects'>
+        <div className='projects-page'>
 
-           {mappedProjects}
+            <div className='left-margin'>
+            </div>
 
-        </div> */}
+            <div className='main'>
+                {/* {mappedProjects} */}
+            </div>
+
+            <div className='right-margin'>
+            </div>
+
+        </div>
 
       </div>
     );
   }
 }
 
-export default Portfolio;
+export default Projects;

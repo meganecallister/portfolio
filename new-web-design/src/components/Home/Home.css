@@ -1,59 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css?family=Meddon|Roboto');
+
 .home {
     height: 100vh;
     width: 100%;
-    background: black;
+    background: white;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
 }
 .block {
     height: 33.33%;
-    width: 33.33%;
+    width: 25%;
     margin: 0;
     color: white;
     font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mini-block {
+    height: 50%;
+    width: 50%;
 }
 #top-left {
+    background: white;
     background: #FCDD71;
 }
 #logo-block {
-    background-image: url('./laptop-yellow-cup.jpg');
+    width: 25%;
+    background: white;
+    /* background-image: url('./laptop-yellow-cup.jpg'); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-#logo-block:hover {
-    transition-property: filter;
-    transition-duration: .5s;
-    transition-timing-function: cubic-bezier(.3, 0, 0, 1);
-    filter: opacity(80%);
-    cursor: pointer; 
+.home .name {
+    /* background: yellow; */
+    text-align: center;
+    color: black;
+    font-family: 'Meddon', cursive;
+    font-size: 34px;
+    margin: 0;
 }
-#top-right {
-    background: #E6E7EC;
+.profession {
+    /* background: pink; */
+    text-align: center;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+#top {
+    background: #92DDDB;
 }
 #about-block {
     background: white;
-    background-image: url('./laptop-yellow-cup.jpg');
+    background-image: url('./IMG_4191.JPG');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: grayscale(100%);
+}
+.about-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    color: white;
 }
 #about-block:hover {
     transition-property: filter;
-    transition-duration: .5s;
+    transition-duration: .6s;
     transition-timing-function: cubic-bezier(.3, 0, 0, 1);
-    filter: opacity(80%);
-    cursor: pointer; 
+    filter: grayscale(0%);
 }
 #center {
-    background: #878383;
+    background: #8a8a8a;
+}
+.projects-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    color: white;
 }
 #projects-block {
     background-image: url('./laptop-yellow-cup.jpg');
@@ -63,42 +100,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: grayscale(100%);
 }
-/* .projects-label {
-    display: none;
-} */
 #projects-block:hover{
     transition-property: filter;
     transition-duration: .5s;
     transition-timing-function: cubic-bezier(.3, 0, 0, 1);
-    filter: opacity(80%);
-    cursor: pointer;    
+    filter: grayscale(0%) opacity(100%);   
 }
-/* #projects-block:hover {
-    .projects-label {
-        display: block;
-    }
-} */
 #bottom-left {
-    background: #B5B4BA;
+    background: #FCDD71;
+}
+.contact-label {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 40px;
 }
 #contact-block {
     background: white;
-    background-image: url('./mailbox-black-white.jpg');
+    background-image: url('./mailbox-teal-road.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom right;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: grayscale(100%);
 }
 #contact-block:hover {
     transition-property: filter;
     transition-duration: .5s;
     transition-timing-function: cubic-bezier(.3, 0, 0, 1);
-    filter: opacity(80%);
-    cursor: pointer; 
+    filter: grayscale(0%);
 }
 #bottom-right {
-    background: #A0BA2C;
+    background: #8a8a8a;
 }

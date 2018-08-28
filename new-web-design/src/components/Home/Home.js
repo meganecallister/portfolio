@@ -7,32 +7,61 @@ class Home extends Component {
     return (
       <div className="home">
 
-        <div className='block' id='top-left'></div>
+        <div className='block' id='top-left'>
+            <div className='mini-block' style={{background: '#8a8a8a'}}></div>
+            <div className='mini-block' style={{background: '#92DDDB'}}></div>
+            <div className='mini-block' style={{background: '#FCDD71'}}></div>
+            <div className='mini-block' style={{background: '#e0e0e0'}}></div>
+        </div>
 
-        <Link to='/'><div className='block' id='logo-block'>
-            <p>LOGO!</p>
-        </div></Link>
+        <div className='block' id='logo-block'>
+            <Link to='/' style={{textDecoration: 'none', color: 'white'}}>
+            <p className='name'>megan callister</p>
+            <p className='profession'>WEB DEVELOPER</p>
+            </Link>
+        </div>
 
-        <div className='block' id='top-right'></div>
+        <div className='block' id='top'></div>
 
-        <Link to='/about' style={{textDecoration: 'none', margin: 0, width: '33.33%', position: 'relative'}}><div className='block' id='about-block'>
-            <p>ABOUT!</p>
-        </div></Link>
+        <div className='block' id='top-right'>
+            <div className='mini-block' style={{background: '#FCDD71'}}></div>
+            <div className='mini-block' style={{background: '#e0e0e0'}}></div>
+            <div className='mini-block' style={{background: 'white'}}></div>
+            <div className='mini-block' style={{background: '#92DDDB'}}></div>
+        </div>
 
-        <div className='block' id='center'></div>
+        <div className='block' id='about-block'>
+            <Link to='/about' style={{textDecoration: 'none', color: 'white'}}><p className='about-label'>ABOUT</p></Link>
+        </div>
+
+        <div className='block' id='center' style={{background: '#e0e0e0'}}></div>
+
+        <div className='block' id='bottom-left'>
+            <div className='mini-block' style={{background: '#FCDD71'}}></div>
+            <div className='mini-block' style={{background: '#8a8a8a'}}></div>
+            <div className='mini-block' style={{background: 'white'}}></div>
+            <div className='mini-block' style={{background: '#92DDDB'}}></div>
+        </div>
 
         <div className='block' id='projects-block'>
-            <p className='projects-label'>PROJECTS!</p>
+            <Link to='/projects' style={{textDecoration: 'none', color: 'white'}}><p className='projects-label'>PROJECTS</p></Link>
         </div>
 
         <div className='block' id='bottom-left'></div>
 
+        <div className='block'>
+            <div className='mini-block' style={{background: 'white'}}></div>
+            <div className='mini-block' style={{background: '#8a8a8a'}}></div>
+            <div className='mini-block' style={{background: '#92DDDB'}}></div>
+            <div className='mini-block' style={{background: '#e0e0e0'}}></div>
+        </div>        
+
         <div className='block' id='contact-block'>
-            <p>CONTACT!</p>
+            <Link to='/contact' style={{textDecoration: 'none', color: 'white'}}><p className='contact-label'>CONTACT</p></Link>
         </div>
 
         <div className='block' id='bottom-right'></div>
-      
+
       </div>
     );
   }

@@ -4,6 +4,7 @@ import './Contact.css';
 // import linkedin from './linkedin.png';
 // import twitter from './twitter.png';
 import axios from 'axios';
+import Nav from '../../components/Nav/Nav';
 
 class Contact extends Component {
   constructor() {
@@ -53,7 +54,7 @@ class Contact extends Component {
     return (
       <div className="contact">
 
-        <h1>contact</h1>
+        <Nav/>
 
         {/* <div className='icons'>
           <a href='https://www.linkedin.com/in/meganecallister/' target='_blank' rel='opopener noreferrer'><img src={linkedin} alt='GitHub icon'/></a>
@@ -61,23 +62,34 @@ class Contact extends Component {
           <a href='https://twitter.com/maneysmilesback' target='_blank'  rel='opopener noreferrer'><img style={{height: 40, margin: 5, marginLeft: 5}} src={twitter} alt='Twitter icon'/></a>
         </div> */}
 
-        {/* <p>Want to get in touch? Email me here!</p> */}
-        
-        <div className='contact-inputs'>
+        <div className='contact-page'>
 
-          <input onChange={ e => this.handleChangeName( e.target.value) } type="text"
-          placeholder="Name" value={this.state.name} className='name-and-email'></input>
 
-          <input onChange={ e => this.handleChangeEmail( e.target.value) } type="text" 
-          placeholder="Email" value={this.state.email} className='name-and-email'></input>
+        <div className='left-margin'>
+            <p>Left Margin</p>
+        </div> 
 
-          <input onChange={ e => this.handleChangeSubject( e.target.value) } type="text"
-          placeholder="Subject" value={this.state.subject} className='name-and-email'></input>   
+        <div className='contact-inputs'>            
 
-          <input onChange={ e => this.handleChangeMessage( e.target.value) } type="text"
-          placeholder="Message" value={this.state.message} className='message'></input>
+            <input onChange={ e => this.handleChangeName( e.target.value) } type="text"
+            placeholder="Name" value={this.state.name} className='name-and-email'></input>
 
-          <button onClick={this.handleClick} className="send">Send</button>
+            <input onChange={ e => this.handleChangeEmail( e.target.value) } type="text" 
+            placeholder="Email" value={this.state.email} className='name-and-email'></input>
+
+            <input onChange={ e => this.handleChangeSubject( e.target.value) } type="text"
+            placeholder="Subject" value={this.state.subject} className='name-and-email'></input>   
+
+            <input onChange={ e => this.handleChangeMessage( e.target.value) } type="text"
+            placeholder="Message" value={this.state.message} className='message'></input>
+
+            <button onClick={this.handleClick} className="send">Send</button>
+
+        </div>
+
+        <div className='right-margin'>
+            <p>Right Margin</p>
+        </div>
 
         </div>
 

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Meddon|Roboto');
+
+.about {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+.about h1 {
+    /* background: blue; */
+    text-align: center;
+    margin: 30px;
+}
+.picAndInfo {
+    display: flex;
+    margin-top: 50px;
+}
+.left-margin {
+    width: 25vw;
+    height: 100%;
+}
+.main {
+    min-width: 560px;
+    width: 50vw;
+    height: 100%;
+    margin: 0;
+}
+.info {
+    background: white;
+    margin: 0;
+}
+.right-margin {
+    width: 25vw;
+    height: 100%;
+}
